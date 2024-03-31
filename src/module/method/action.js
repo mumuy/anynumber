@@ -3,26 +3,13 @@ import {toFixed} from './format.js';
 
 // 四则混合运算
 export function doAction(number1,action,number2){
-    let group = getGroup(number1,number2);
     let object = null;
     let time = 1;
     let number = 1;
-    let length = (group.time.toString().length - 1);
-    if(action=='+'){
-        object = getObject(group.value1+group.value2);
-        time = group.time;
-    }else if(action=='-'){
-        object = getObject(group.value1-group.value2);
-        time = group.time;
-    }else if(action=='*'){
-        object = getObject(group.value1*group.value2);
-        time = group.time*group.time;
-    }else if(action=='/'){
-        let max = BigInt('1'+(new Array(36+length).fill('0').join('')));
-        object = getObject(group.value1*max/group.value2);
-        time = max;
-    }else if(action=='**'){
+    let length = 1;
+    if(action=='**'){
         object = getObject(number1**number2);
+        length = (object.time.toString().length - 1);
         time = object.time;
     }else if(action=='%'){
         let integer = Math.floor(Math.abs(number1)/Math.abs(number2));
@@ -30,6 +17,23 @@ export function doAction(number1,action,number2){
         let maxNumber = doAction(Math.abs(integer),'*',Math.abs(number2));
         let diff = doAction(Math.abs(number1),'-',maxNumber);
         return (isNegative?'-':'')+diff;
+    }else if(['+','-','*','/']){
+        let group = getGroup(number1,number2);
+        length = (group.time.toString().length - 1);
+        if(action=='+'){
+            object = getObject(group.value1+group.value2);
+            time = group.time;
+        }else if(action=='-'){
+            object = getObject(group.value1-group.value2);
+            time = group.time;
+        }else if(action=='*'){
+            object = getObject(group.value1*group.value2);
+            time = group.time*group.time;
+        }else if(action=='/'){
+            let max = BigInt('1'+(new Array(36+length).fill('0').join('')));
+            object = getObject(group.value1*max/group.value2);
+            time = max;
+        }
     }else{
         return NaN;
     }

@@ -1,9 +1,10 @@
+import {toValueString} from './format.js';
 import {doAction} from './action.js';
 
 // 小数转整数表达
 export function getObject(number){
-    let value = number.toString().replace(/^-/,'');
-    let isNegative = number.toString().indexOf('-')==0;
+    let value = toValueString(number).replace(/^-/,'');
+    let isNegative = toValueString(number).indexOf('-')==0;
     let length = value.length;
     let index = value.indexOf('.');
     let t = index>-1?length - index - 1:0;
