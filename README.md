@@ -12,7 +12,7 @@
 然后使用 `require` 引入模块
 
 ```js
-var idcard = require("anynumber");
+var AnyNumber = require("anynumber");
 ```
 
 ## AnyNumber() 初始化
