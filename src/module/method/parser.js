@@ -9,7 +9,7 @@ export function parser(expression){
         fun:(...match)=>{
             return '';
         }
-    },{
+    },{                     // 科学计数法
         exp:/([\+\-]?\d*\.\d*|[\+\-]?\d*)e([\+\-]?\d*\.\d*|[\+\-]?\d*)/g,
         fun:(...match)=>{
             return toValueString(match[0]);

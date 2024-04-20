@@ -42,6 +42,6 @@ export function doAction(number1,action,number2){
     let resultArray = (new Array(36+length)).fill('0').concat(value.split(''));
     let index = resultArray.length - (time.toString().length - 1);;
     resultArray.splice(index,0,'.');
-    let result = toFixed(resultArray.join(''),32).replace(/^0+/,'').replace(/(?<=\.\d*)0*$/,'').replace(/\.0*$/,'').replace(/^\./,'0.');
+    let result = toFixed(resultArray.join(''),32).replace(/^0+/,'').replace(/(?<=\.\d*)0*$/,'').replace(/\.0*$/,'').replace(/^\./,'0.')||'0';
     return (isNegative?'-':'')+result;
 };
