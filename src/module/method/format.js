@@ -16,9 +16,9 @@ export function toFixed(number,fixed){
 }
 
 // 数值格式化
-export function toFormat(number,fixed){
-    let reg = new RegExp('([\\d,]+\\.?(\\d{0,'+fixed+'})?).*');                 //位数截取
-    let str = number.replace(/[^\d\.]/g,'').replace(/^[^\d]/,'').replace(reg,'$1');    //清除格式
+export function toFormat(number,fixed = 2){
+    let reg = new RegExp('([\\d,]+\\.?(\\d{0,'+fixed+'})?).*');                                         //位数截取
+    let str = number.replace(/[^\d\.]/g,'').replace(/^[^\d]/,'').replace(reg,'$1').replace(/\.$/,'');    //清除格式
     let value = (+str).toFixed(fixed);
     let result = '';
     if(str){
