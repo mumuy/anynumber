@@ -47,3 +47,42 @@ export function toValueString(number){
     }
     return number.toString();
 };
+
+// 中文金额表达
+export function toChineseExpression(value) {
+    let valueStr = (+(+value).toFixed(2)).toString();
+    let numberArr = ['零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖', '拾'];
+    let positionArr = ['', '拾', '佰', '仟', '万'];
+    let levelArr = ['', '万', '亿', '兆', '京'];
+    let unitArr = ['圆', '角', '分'];
+    let [integer, fraction] = valueStr.split('.');
+    if (integer.length > 16) {
+        return '数值超过范围';
+    }
+    let integerGroup = integer.replace(/\d(?=(?:\d{4})+\b)/g, '$&,').split(',').reverse();
+    let integerText = integerGroup.map(function (integer, level) {
+        let groupText = integer.split('').map(function (number, index) {
+            let i = integer.length - index - 1;
+            let position = i % 4;
+            return number == '0' ? numberArr[number] : numberArr[number] + positionArr[position];
+        }).join('').replace(/零+/g, '零').replace(/零$/g, '');
+        if (groupText) {
+            groupText += levelArr[level];
+        }
+        return groupText;
+    }).reverse().join('').replace(/零+/g, '零').replace(/零$/g, '');
+    if(!integerText){
+        integerText = '零';
+    }
+    integerText += unitArr[0];
+    let fractionText = '';
+    if (fraction && fraction.length) {
+        fraction.split('').forEach(function (number, index) {
+            let i = index + 1;
+            integerText += numberArr[number] + unitArr[i];
+        });
+    } else {
+        fractionText += '整';
+    }
+    return integerText + fractionText;
+}
