@@ -29,6 +29,9 @@
         "yarn": "please-use-npm",
         "npm": ">=8"
     },
+    "files":[
+        "dist"
+    ],
     "devDependencies": {
         "@babel/core": "^7.26.0",
         "@babel/plugin-syntax-import-attributes": "^7.26.0",
