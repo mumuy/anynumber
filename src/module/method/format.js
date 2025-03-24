@@ -50,11 +50,11 @@ export function toValueString(number){
 
 // 中文金额表达
 export function toChineseExpression(value) {
-    let valueStr = (+(+value).toFixed(2)).toString();
+    let valueStr = (+(+value).toFixed(4)).toString();
     let numberArr = ['零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖', '拾'];
     let positionArr = ['', '拾', '佰', '仟', '万'];
     let levelArr = ['', '万', '亿', '兆', '京'];
-    let unitArr = ['圆', '角', '分'];
+    let unitArr = ['圆', '角', '分', '厘', '毫'];
     let [integer, fraction] = valueStr.split('.');
     if (integer.length > 16) {
         return '数值超过范围';
