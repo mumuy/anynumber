@@ -7,9 +7,9 @@ export function toFixed(number,fixed){
     number += number.includes('.')?zero:'.'+zero;
     let index = number.indexOf('.')+fixed;
     let num = +number.charAt(index+1);
-    number = number.substring(0,index+1);
+    number = number.slice(0,index+1);
     if(num>=5){
-        let other = '0.'+zero.substring(1)+'1';
+        let other = '0.'+zero.slice(1)+'1';
         number = doAction(number,'+',other);
     }
     return number;
