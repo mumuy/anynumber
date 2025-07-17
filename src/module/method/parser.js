@@ -1,3 +1,4 @@
+import {getObject,getGroup} from './number.js';
 import {toValueString} from './format.js';
 import {doAction} from './action.js';
 

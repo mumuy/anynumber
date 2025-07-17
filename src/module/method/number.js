@@ -1,4 +1,5 @@
 import {toValueString} from './format.js';
+import {doAction} from './action.js';
 
 // 小数转整数表达
 export function getObject(number){

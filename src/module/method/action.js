@@ -5,6 +5,7 @@ import {toFixed} from './format.js';
 export function doAction(number1,action,number2){
     let object = null;
     let time = 1;
+    let number = 1;
     let length = 1;
     if(action=='**'){
         object = getObject(number1**number2);

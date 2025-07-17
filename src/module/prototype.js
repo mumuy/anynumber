@@ -1,4 +1,4 @@
-import {toFixed,toFormat,toChineseExpression} from './method/format.js';
+import {toFixed,toFormat} from './method/format.js';
 import {doAction} from './method/action.js';
 import {parser} from './method/parser.js';
 
@@ -43,9 +43,6 @@ export default {
     },
     toFixed(fixed){
         return toFixed(this.value,fixed);
-    },
-    toChineseExpression(){
-        return toChineseExpression(this.value);
     },
     toString(){
         return this.value;
