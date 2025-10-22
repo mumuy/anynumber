@@ -9,9 +9,11 @@
         <meta name="renderer" content="webkit">
         <meta http-equiv="Cache-Control" content="no-transform" />
         <meta name="format-detection" content="telephone=no"/>
-        <title>大数浮点数计算</title>
         <meta name="keywords" content="bignumber,parser,浮点数溢出,大数计算,科学计数法"/>
         <meta name="description" content="提供大数浮点数计算及数值格式化工具"/>
+        <title>大数浮点数计算</title>
+        <link rel="canonical" href="https://passer-by.com/anynumber/"/>
+        <link rel="stylesheet" href="https://passer-by.com/static/style/common.css">
         <link rel="stylesheet" href="static/style/index.css">
         <script type="text/javascript">
             setTimeout(function(){
@@ -25,108 +27,47 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="header">
-                <div class="mod-menu">
-                    <div class="bd">
-                        <ul>
-                            <li>
-                                <a href="#AnyNumber">
-                                    <span class="title">初始化</span>
-                                    <span class="subtitle">AnyNumber</span>
-                                </a>
-                            </li>
-                            <li>
-                                <h3>原型方法</h3>
-                            </li>
-                            <li>
-                                <a href="#toFormat">
-                                    <span class="title">返回格式化数值</span>
-                                    <span class="subtitle">toFormat()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#toExponential">
-                                    <span class="title">返回科学计数法</span>
-                                    <span class="subtitle">toExponential()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#toFixed">
-                                    <span class="title">精确到小数点后n位</span>
-                                    <span class="subtitle">toFixed()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#toString">
-                                    <span class="title">返回字符串</span>
-                                    <span class="subtitle">toString()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#toNumber">
-                                    <span class="title">返回原生Number对象</span>
-                                    <span class="subtitle">toNumber()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#add">
-                                    <span class="title">加法运算</span>
-                                    <span class="subtitle">add()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#subtract">
-                                    <span class="title">减法运算</span>
-                                    <span class="subtitle">subtract()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#multiply">
-                                    <span class="title">乘法运算</span>
-                                    <span class="subtitle">multiply()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#divide">
-                                    <span class="title">除法运算</span>
-                                    <span class="subtitle">divide()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#mod">
-                                    <span class="title">取余运算</span>
-                                    <span class="subtitle">mod()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#sqrt">
-                                    <span class="title">开方计算</span>
-                                    <span class="subtitle">sqrt()</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#pow">
-                                    <span class="title">幂计算</span>
-                                    <span class="subtitle">pow()</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="inner">
-                    <div class="mod-head">
+            <header>
+                <div class="mod-head">
+                    <div class="inner">
                         <div class="bd">
-                            <a class="btn" href="https://github.com/mumuy/anynumber/" rel="nofollow" target="_blank" title="Github">
-                                <svg aria-hidden="true" class="octicon" height="20" title="GitHub " version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
-                                <span>Github</span>
-                            </a>
-                            <a class="btn" href="/">个人网站</a>
+                            <div class="logo">
+                                <a href="/"><img src="https://passer-by.com/static/image/public/logo.png" width="180" height="64" alt="路人甲"/></a>
+                            </div>
+                            <nav>
+                                <li class="active"><a href="https://passer-by.com/project.html">项目</a></li>
+                                <li><a href="https://passer-by.com/writing.html">文字</a></li>
+                                <li><a href="https://passer-by.com/photograph.html">摄影</a></li>
+                                <li><a href="https://passer-by.com/comment.html">留言</a></li>
+                                <li><a href="https://passer-by.com/about.html">关于</a></li>
+                            </nav>
+                            <div class="operation">
+                                <a class="btn" href="https://github.com/mumuy/anynumber/" rel="nofollow" target="_blank" title="Github">
+                                    <svg aria-hidden="true" class="octicon" title="GitHub " version="1.1" viewBox="0 0 16 16" width="24" height="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+                                    <span>Github</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="mod-panel">
-                        <div class="hd">
+                </div>
+                <div class="mod-bg">
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.4)"></use>
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.6)"></use>
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.2)"></use>
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255,255,255,1)"></use>
+                        </g>
+                    </svg>
+                </div>
+            </header>
+            <div class="container">
+                <div class="inner">
+                    <section class="mod-poster">
+                        <div class="bd">
                             <h1>大数浮点数计算<span class="tag">开源算法</span></h1>
                             <p>提供大数浮点数计算及数值格式化工具</p>
                             <div class="buttons">
@@ -140,145 +81,236 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="bd">
-                            <div id="AnyNumber" class="box">
-                                <div class="c-hd">
-                                    <p class="title">初始化</p>
-                                    <p class="subtitle">AnyNumber(expression)</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>数值格式化</p>
-                                    <p>运行：AnyNumber(2.4e8)</p>
-                                    <br>
-                                    <p>通过字符串计算公式初始化</p>
-                                    <p>运行：AnyNumber('0.1+0.2')</p>
-                                    <p>运行：AnyNumber('100%30')</p>
-                                </div>
-                            </div>
-                            <div id="toFormat" class="box">
-                                <div class="c-hd">
-                                    <p class="title">返回格式化数值</p>
-                                    <p class="subtitle">toFormat(tofixed)</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber(1000000.123456).toFormat(2)</p>
-                                    <p>返回：'1,000,000.12' </p>
-                                </div>
-                            </div>
-                            <div id="toExponential" class="box">
-                                <div class="c-hd">
-                                    <p class="title">返回科学计数法</p>
-                                    <p class="subtitle">toExponential()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber(128000).toExponential(2)</p>
-                                    <p>返回：'1.28e+5'</p>
-                                </div>
-                            </div>
-                            <div id="toFixed" class="box">
-                                <div class="c-hd">
-                                    <p class="title">精确度小数点后n位</p>
-                                    <p class="subtitle">toFixed()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber(3.1415926535).toFixed(2)</p>
-                                    <p>返回：'3.14'</p>
-                                </div>
-                            </div>
-                            <div id="toString" class="box">
-                                <div class="c-hd">
-                                    <p class="title">返回字符串(等效于.value)</p>
-                                    <p class="subtitle">toString()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber(1.2e3).toString()</p>
-                                    <p>返回：'1200'</p>
-                                </div>
-                            </div>
-                            <div id="toNumber" class="box">
-                                <div class="c-hd">
-                                    <p class="title">返回原生Number对象</p>
-                                    <p class="subtitle">toNumber()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber('1.28e3').toNumber()</p>
-                                    <p>返回：1280</p>
-                                </div>
-                            </div>
-                            <div id="add" class="box">
-                                <div class="c-hd">
-                                    <p class="title">加法运算</p>
-                                    <p class="subtitle">add()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber('0.1').add('0.2').value</p>
-                                    <p>返回：'0.3'</p>
-                                </div>
-                            </div>
-                            <div id="subtract" class="box">
-                                <div class="c-hd">
-                                    <p class="title">减法运算</p>
-                                    <p class="subtitle">subtract()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber('100').subtract('0.5').value</p>
-                                    <p>返回：'99.5'</p>
-                                </div>
-                            </div>
-                            <div id="multiply" class="box">
-                                <div class="c-hd">
-                                    <p class="title">乘法运算</p>
-                                    <p class="subtitle">multiply()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber('3').multiply('2').value</p>
-                                    <p>返回：'6'</p>
-                                </div>
-                            </div>
-                            <div id="divide" class="box">
-                                <div class="c-hd">
-                                    <p class="title">除法运算</p>
-                                    <p class="subtitle">divide()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber('100').divide('4').value</p>
-                                    <p>返回：'25'</p>
-                                </div>
-                            </div>
-                            <div id="mod" class="box">
-                                <div class="c-hd">
-                                    <p class="title">取余运算</p>
-                                    <p class="subtitle">mod()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber('10').mod('3').value</p>
-                                    <p>返回：'1'</p>
-                                </div>
-                            </div>
-                            <div id="sqrt" class="box">
-                                <div class="c-hd">
-                                    <p class="title">开方运算</p>
-                                    <p class="subtitle">sqrt()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber('16').sqrt().value</p>
-                                    <p>返回：'4'</p>
-                                </div>
-                            </div>
-                            <div id="pow" class="box">
-                                <div class="c-hd">
-                                    <p class="title">幂运算</p>
-                                    <p class="subtitle">pow()</p>
-                                </div>
-                                <div class="c-bd">
-                                    <p>运行：AnyNumber('10').pow('2').value</p>
-                                    <p>返回：'100'</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </section>
                 </div>
-                <div class="mod-copy">
+                <div class="inner layout-container">
+                    <aside>
+                        <section class="mod-menu">
+                            <div class="bd">
+                                <ul>
+                                    <li>
+                                        <a href="#AnyNumber">
+                                            <span class="title">初始化</span>
+                                            <span class="subtitle">AnyNumber</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <h3>原型方法</h3>
+                                    </li>
+                                    <li>
+                                        <a href="#toFormat">
+                                            <span class="title">返回格式化数值</span>
+                                            <span class="subtitle">toFormat()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#toExponential">
+                                            <span class="title">返回科学计数法</span>
+                                            <span class="subtitle">toExponential()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#toFixed">
+                                            <span class="title">精确到小数点后n位</span>
+                                            <span class="subtitle">toFixed()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#toString">
+                                            <span class="title">返回字符串</span>
+                                            <span class="subtitle">toString()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#toNumber">
+                                            <span class="title">返回原生Number对象</span>
+                                            <span class="subtitle">toNumber()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#add">
+                                            <span class="title">加法运算</span>
+                                            <span class="subtitle">add()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#subtract">
+                                            <span class="title">减法运算</span>
+                                            <span class="subtitle">subtract()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#multiply">
+                                            <span class="title">乘法运算</span>
+                                            <span class="subtitle">multiply()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#divide">
+                                            <span class="title">除法运算</span>
+                                            <span class="subtitle">divide()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#mod">
+                                            <span class="title">取余运算</span>
+                                            <span class="subtitle">mod()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#sqrt">
+                                            <span class="title">开方计算</span>
+                                            <span class="subtitle">sqrt()</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#pow">
+                                            <span class="title">幂计算</span>
+                                            <span class="subtitle">pow()</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </aside>
+                    <main>
+                        <section id="AnyNumber" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">初始化</h3>
+                                <p class="subtitle">AnyNumber(expression)</p>
+                            </div>
+                            <div class="bd">
+                                <p>数值格式化</p>
+                                <p>运行：AnyNumber(2.4e8)</p>
+                                <br>
+                                <p>通过字符串计算公式初始化</p>
+                                <p>运行：AnyNumber('0.1+0.2')</p>
+                                <p>运行：AnyNumber('100%30')</p>
+                            </div>
+                        </section>
+                        <section id="toFormat" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">返回格式化数值</h3>
+                                <p class="subtitle">toFormat(tofixed)</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber(1000000.123456).toFormat(2)</p>
+                                <p>返回：'1,000,000.12' </p>
+                            </div>
+                        </section>
+                        <section id="toExponential" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">返回科学计数法</h3>
+                                <p class="subtitle">toExponential()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber(128000).toExponential(2)</p>
+                                <p>返回：'1.28e+5'</p>
+                            </div>
+                        </section>
+                        <section id="toFixed" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">精确度小数点后n位</h3>
+                                <p class="subtitle">toFixed()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber(3.1415926535).toFixed(2)</p>
+                                <p>返回：'3.14'</p>
+                            </div>
+                        </section>
+                        <section id="toString" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">返回字符串(等效于.value)</h3>
+                                <p class="subtitle">toString()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber(1.2e3).toString()</p>
+                                <p>返回：'1200'</p>
+                            </div>
+                        </section>
+                        <section id="toNumber" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">返回原生Number对象</h3>
+                                <p class="subtitle">toNumber()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber('1.28e3').toNumber()</p>
+                                <p>返回：1280</p>
+                            </div>
+                        </section>
+                        <section id="add" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">加法运算</h3>
+                                <p class="subtitle">add()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber('0.1').add('0.2').value</p>
+                                <p>返回：'0.3'</p>
+                            </div>
+                        </section>
+                        <section id="subtract" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">减法运算</h3>
+                                <p class="subtitle">subtract()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber('100').subtract('0.5').value</p>
+                                <p>返回：'99.5'</p>
+                            </div>
+                        </section>
+                        <section id="multiply" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">乘法运算</h3>
+                                <p class="subtitle">multiply()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber('3').multiply('2').value</p>
+                                <p>返回：'6'</p>
+                            </div>
+                        </section>
+                        <section id="divide" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">除法运算</h3>
+                                <p class="subtitle">divide()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber('100').divide('4').value</p>
+                                <p>返回：'25'</p>
+                            </div>
+                        </section>
+                        <section id="mod" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">取余运算</h3>
+                                <p class="subtitle">mod()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber('10').mod('3').value</p>
+                                <p>返回：'1'</p>
+                            </div>
+                        </section>
+                        <section id="sqrt" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">开方运算</h3>
+                                <p class="subtitle">sqrt()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber('16').sqrt().value</p>
+                                <p>返回：'4'</p>
+                            </div>
+                        </section>
+                        <section id="pow" class="mod-panel">
+                            <div class="hd">
+                                <h3 class="title">幂运算</h3>
+                                <p class="subtitle">pow()</p>
+                            </div>
+                            <div class="bd">
+                                <p>运行：AnyNumber('10').pow('2').value</p>
+                                <p>返回：'100'</p>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+                <section class="module mod-copy">
                     <div class="inner">
                         <div class="hd"><span>算法开源</span></div>
                         <div class="bd">
@@ -308,48 +340,73 @@
                                 <code><a href="https://passer-by.com/anynumber/dist/anynumber.min.js" target="_blank" rel="nofollow">https://passer-by.com/anynumber/dist/anynumber.min.js</a></code>
                         </div>
                     </div>
-                </div>
-                <script type="text/javascript" src="https://passer-by.com/public/script/projects.js"></script>
-                <div class="mod-foot">
-                    <div class="inner">
-                        <div class="bd">
-                            <p>Copyright &copy; <a href="http://passer-by.com">passer-by.com</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mod-fixedbar">
-                    <div class="bd">
-                        <a href="javascript:;"><img src="static/image/gotop.png" width="24" height="24"></a>
-                    </div>
+                </section>
+                <div class="inner">
+                    <script type="text/javascript" src="https://passer-by.com/static/script/projects.js"></script>
                 </div>
             </div>
+            <footer>
+                <div class="mod-fixedbar">
+                    <div class="bd">
+                        <ul>
+                            <li>
+                                <a class="gotop" href="javascript:;" rel="nofollow">
+                                    <img src="https://www.passer-by.com/static/image/public/icon-gotop.png" width="24" height="24" alt="回到顶部">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mod-foot">
+                    <div class="bd">
+                        <p>
+                            <span>Copyright &copy; 2025</span>
+                            <a href="/">路人甲</a>
+                            <span>版权所有</span>
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </div>
         <script type="text/javascript" src="https://jquerywidget.com/public/script/jquery.min.js"></script>
-        <script type="text/javascript" src="https://jquerywidget.com/code/jquery.headroom.js"></script>
         <script type="text/javascript">
-            $('.mod-menu').headroom({autoHide:false,scrollOffset:10,background:'transparent',autoFixed:false});
-
-            // 底部滚动
-            (function(){
-                let timer = null;
-                let $gotop = document.querySelector('.mod-fixedbar a');
-                $gotop.addEventListener('click',function(){
-                    cancelAnimationFrame(timer);
-                    let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-                    let move = scrollTop/18;
-                    timer = requestAnimationFrame(function fn(){
-                        var oTop = document.body.scrollTop || document.documentElement.scrollTop;
-                        if(oTop > 0){
-                            document.body.scrollTop = document.documentElement.scrollTop = oTop - move;
-                            timer = requestAnimationFrame(fn);
-                        }else{
-                            cancelAnimationFrame(timer);
-                        }
-                    });
+            const $window = $(window);
+            const $mod_menu = $('.mod-menu');
+            const $mod_panel = $('.mod-panel');
+            const $scrollElement = $('html,body');
+            $mod_menu.on('click','a',function(){
+                const $this = $(this);
+                const hash = $this.attr('href');
+                $mod_menu.find('a').removeClass('active');
+                $this.addClass('active');
+                const top = $(hash).offset().top - 80;
+                $scrollElement.animate({
+                    scrollTop: top
+                }, 500);
+                return false;
+            });
+            const formatScroll = function(){
+                if($scrollElement.is(':animated')){
+                    return false;
+                }
+                const scrollTop = $window.scrollTop();
+                let hash = '';
+                $mod_panel.each(function(){
+                    const $this = $(this);
+                    const top = $this.offset().top - 80;
+                    if(scrollTop>=top){
+                        hash = $this.attr('id');
+                    }
                 });
-            })();
+                $mod_menu.find('a').removeClass('active');
+                if(hash){
+                    $mod_menu.find('a').filter(`[href="#${hash}"]`).addClass('active');
+                }
+            };
+            $window.on('scroll',formatScroll);
         </script>
-        <script async defer src="https://cdn.bootcdn.net/anynumber/libs/github-buttons/2.21.1/buttons.min.js"></script>
-        <script type="text/javascript" src="https://passer-by.com/public/script/stat.js"></script>
+        <script async defer src="https://cdn.bootcdn.net/ajax/libs/github-buttons/2.21.1/buttons.min.js"></script>
+        <script type="text/javascript" src="https://passer-by.com/static/script/common.js"></script>
+        <script type="text/javascript" src="https://passer-by.com/static/script/stat.js"></script>
     </body>
 </html>
