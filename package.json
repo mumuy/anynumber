@@ -24,7 +24,7 @@
     "bugs": {
         "url": "https://github.com/mumuy/anynumber/issues"
     },
-    "files":[
+    "files": [
         "dist"
     ],
     "devDependencies": {
@@ -36,7 +36,7 @@
         "@babel/runtime": "^7.23.2",
         "@rollup/plugin-babel": "^6.0.3",
         "@rollup/plugin-node-resolve": "^15.1.0",
-        "@rollup/plugin-terser": "^0.4.1",
+        "@rollup/plugin-terser": "^1.0.0",
         "acorn-import-assertions": "^1.9.0",
         "rollup": "^3.26.3",
         "rollup-plugin-import-assert": "^3.0.1"
@@ -46,5 +46,8 @@
         "watch": "rollup -wc"
     },
     "homepage": "https://passer-by.com/anynumber/",
-    "directories": {}
+    "directories": {},
+    "dependencies": {
+        "anynumber": "^1.0.3"
+    }
 }
