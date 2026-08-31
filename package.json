@@ -28,18 +28,17 @@
         "dist"
     ],
     "devDependencies": {
-        "@babel/core": "^7.23.2",
-        "@babel/plugin-syntax-import-attributes": "^7.22.5",
-        "@babel/plugin-transform-class-properties": "^7.22.5",
-        "@babel/plugin-transform-runtime": "^7.23.2",
-        "@babel/preset-env": "^7.23.2",
-        "@babel/runtime": "^7.23.2",
-        "@rollup/plugin-babel": "^6.0.3",
-        "@rollup/plugin-node-resolve": "^15.1.0",
+        "@babel/core": "^8.0.1",
+        "@babel/plugin-syntax-import-attributes": "^7.29.7",
+        "@babel/plugin-transform-class-properties": "^8.0.1",
+        "@babel/plugin-transform-runtime": "^8.0.1",
+        "@babel/preset-env": "^8.0.2",
+        "@babel/runtime": "^8.0.0",
+        "@rollup/plugin-babel": "^7.1.0",
+        "@rollup/plugin-node-resolve": "^16.0.3",
         "@rollup/plugin-terser": "^1.0.0",
-        "acorn-import-assertions": "^1.9.0",
-        "rollup": "^3.26.3",
-        "rollup-plugin-import-assert": "^3.0.1"
+        "rollup": "^4.63.1",
+        "rollup-plugin-import-css": "^4.2.1"
     },
     "scripts": {
         "build": "rollup -c",
@@ -48,6 +47,5 @@
     "homepage": "https://passer-by.com/anynumber/",
     "directories": {},
     "dependencies": {
-        "anynumber": "^1.0.3"
     }
 }
